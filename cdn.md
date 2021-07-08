@@ -22,11 +22,11 @@ The origin server sends the asset to the CDN, which stores it in its cache. The 
 
 ### Pull CDN
 
-![alt text](https://github.com/revathyarunachalam/system_design/assests/blob/main/cdn2.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/cdn2.png?raw=true)
 
 If the CDN doesn’t have the static asset in its cache, then it forwards the request to the origin server and then caches the new asset.
 
-![alt text](https://github.com/revathyarunachalam/system_design/assests/blob/main/cdn3.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/cdn3.png?raw=true)
 
 If the CDN has the asset in its cache, it returns the cached asset.
 
@@ -34,7 +34,7 @@ There are advantages and disadvantages to both approaches. In a Push CDN, it’s
 
 Even with its disadvantages, Pull CDNs are still a lot more popular than Push CDNs, because they are much easier to maintain. There are also several ways to reduce the time that a static asset is stale for. Pull CDNs usually attach a timestamp to an asset when cached, and typically only cache the asset for up to 24 hours by default. If a user makes a request for an asset that’s expired in the CDN cache, the CDN will re-fetch the asset from the origin server, and get an updated asset if there is one. Pull CDNs also usually support Cache-Control response headers, which offers more flexibility with regards to caching policy, so that cached assets can be re-fetched every five minutes, whenever there’s a new release version, etc. Another solution is “cache busting”, where you cache assets with a hash or etag that is unique compared to previous asset versions.
 
-![alt text](https://github.com/revathyarunachalam/system_design/assests/blob/main/cdn4.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/cdn4.png?raw=true)
 
 If a user is fetching the static asset image.png, they would fetch it at https://3284.cloudfront.net/image.png. If the CDN doesn’t have it, then the CDN would fetch the asset from the origin server at https://test-app.com/image.png.
 
@@ -44,9 +44,9 @@ CDNs are generally a good service to add your system for reducing request latenc
 ### Exercise
 You’re building Amazon’s product listing service, which serves a collection of product metadata and images to online shoppers’ browsers. Where would a CDN fit in the following design?
 
-![alt text](https://github.com/revathyarunachalam/system_design/assests/blob/main/cdn5.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/cdn5.png?raw=true)
 
 ### Answer:
-![alt text](https://github.com/revathyarunachalam/system_design/assests/blob/main/cdn6.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/cdn6.png?raw=true)
 
 

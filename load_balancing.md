@@ -6,7 +6,7 @@
 4. Typically a load balancer sits between the client and the server accepting incoming network and application traffic and distributing the traffic across multiple backend servers using various algorithms.
 5. By balancing application requests across multiple servers, a load balancer reduces individual server load and prevents any one application server from becoming a single point of failure, thus improving overall application availability and responsiveness.
 
-![alt text](https://github.com/revathyarunachalam/system_design/blob/main/load_balancer.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/load_balancer.png?raw=true)
 
 To utilize full scalability and redundancy, we can try to balance the load at each layer of the system. We can add LBs at three places:
 
@@ -14,7 +14,7 @@ To utilize full scalability and redundancy, we can try to balance the load at ea
 - Between web servers and an internal platform layer, like application servers or cache servers
 - Between internal platform layer and database.
 
-![alt text](https://github.com/revathyarunachalam/system_design/blob/main/load_balancer2.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/load_balancer2.png?raw=true)
 
 ### Benifits of LB
 1. Users experience faster, uninterrupted service. Users won’t have to wait for a single struggling server to finish its previous tasks. Instead, their requests are immediately passed on to a more readily available resource.
