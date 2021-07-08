@@ -16,7 +16,7 @@ Cloud providers typically offer their own CDN solutions, since it’s so popular
 Like mentioned above, a CDN can be thought of as a globally distributed group of servers that cache static assets for your origin server. Every CDN server has its own local cache and they should all be in sync. There are two primary ways for a CDN cache to be populated, which creates the distinction between Push and Pull CDNs. In a Push CDN, it’s the responsibility of the engineers to push new/updated files to the CDN, which would then propagate them to all of the CDN server caches. In a Pull CDN, the server cache is lazily updated: when a user sends a static asset request to the CDN server and it doesn’t have it, it’ll fetch the asset from the origin server, populate its cache with the asset, and then send the asset to the user.
 
 ### Push CDN
-![alt text](https://github.com/revathyarunachalam/system_design/assests/blob/main/cdn1.png?raw=true)
+![alt text](https://github.com/revathyarunachalam/system_design/blob/main/assests/cdn1.png?raw=true)
 
 The origin server sends the asset to the CDN, which stores it in its cache. The CDN never makes any requests to the origin server.
 
